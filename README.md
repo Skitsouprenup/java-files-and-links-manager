@@ -5,7 +5,7 @@ Watch this [**video**](https://youtu.be/SvH74gjn25g) to see this app in action.
 
 This app can help you share multiple non-copyrighted books and tutorials to online forums. This app generates pre-formatted html that is ready to be posted in forums, insert links in that html, create dummy files to increase your zip file size and many more. The only thing you need to do is fill up the pre-formatted html with necessary information.
 
-I may update this project in the feature. However, that may not happen soon because I'm focusing on web development right now. I created and halted this project somewhere in 2021. Note, this project is pretty much complete. However, there are few features in this project that are left unfinished.  
+I may update this project in the feature. However, that may not happen soon because I'm focusing on web development right now. I created and halted this project somewhere in 2021. Note, this project is pretty much complete. However, there are few features in this project that are left unfinished.
 
 I didn't use IDE when I created this app. You can try importing it in your favorite IDE if you want. If you wanna compile this via terminal/command prompt, here's how I do it.
 
@@ -19,7 +19,7 @@ Once you compiled the project successfully, open terminal/cmd in the 'classes' d
 
 ### Building
 If you want to pack this project in .jar file, create build director adjacent to 'classes' directory and open terminal/cmd in the 'classes' directory and enter this command:  
-**jar cfe ../build/Fmanager.jar main.Fmanager main/*.class gui/*.class gui/events/*.class gui/gui_related_events/*.class gui/subpanels/*.class gui/subpanels/filetree/*.class gui/dialogs/*.class gui/dialogs/subpanels/prefs_subpanel/*.class fileoperations/*.class fileoperations/approvedopfunctions/*.class**
+**jar cfe ../build/Fmanager.jar main.Fmanager main/\*.class gui/\*.class gui/events/\*.class gui/gui_related_events/\*.class gui/subpanels/\*.class gui/subpanels/filetree/\*.class gui/dialogs/\*.class gui/dialogs/subpanels/prefs_subpanel/\*.class fileoperations/\*.class fileoperations/approvedopfunctions/\*.class**
 
 After finishing this project, I realized that IDEs are precious tools :satisfied:
 
