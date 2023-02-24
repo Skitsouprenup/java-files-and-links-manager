@@ -1,6 +1,8 @@
 # java-files-and-links-manager
 Multipurpose files and links manager that is created by me using java swing package.
 
+Watch this [**video**](https://youtu.be/SvH74gjn25g) to see this app in action.
+
 This app can help you share multiple non-copyrighted books and tutorials to online forums. This app generates pre-formatted html that is ready to be posted in forums, insert links in that html, create dummy files to increase your zip file size and many more. The only thing you need to do is fill up the pre-formatted html with necessary information.
 
 I may update this project in the feature. However, that may not happen soon because I'm focusing on web development right now. I created and halted this project somewhere in 2021. Note, this project is pretty much complete. However, there are few features in this project that are left unfinished.  
