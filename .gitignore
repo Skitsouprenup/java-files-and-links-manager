@@ -1,4 +1,5 @@
 packages/compile.bat
 packages/run.bat
 classes
+prefs
 build
