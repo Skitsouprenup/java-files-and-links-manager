@@ -23,8 +23,11 @@ If you want to pack this project in .jar file, create build director adjacent to
 
 After finishing this project, I realized that IDEs are precious tools :satisfied:
 
+## Java Version
+I created this app using java17(OpenJDK)(Eclipse Temurin). Thus, you need java17 or higher version if wanna run this app properly.
+
 ## SerialVersionUID and raw types warnings
-When I compiled and run this in terminal/cmd using java17(Eclipse Temurin), I don't see these warnings because I think I already suppressed them. However, some IDEs may still complain about these stuff. 
+When I compiled and run this in terminal/cmd using java17(Eclipse Temurin), I didn't see these warnings because I think I already suppressed them. However, some IDEs may still complain about these stuff. 
 
 IDEs may complain that 'SerialVersionUID' is unused. That's alright because the purpose of that ID is to give a hint to JVM that this class will be serialized using the ID. Explicitly setting this ID improves the serialization/deserialization performance.
 
@@ -102,7 +105,7 @@ For popup functionality, this panel has multiple popup options:
 **Replace Text** lets you replace a character in a file name with another character. You put a character that you wanna replace in the 'Text' textbox and put a replacement for that character in 'Replace with' textbox. You can choose which position the replacement will take place by checking one of the checkboxes:
 
 **Leading:** Only the first character is subjected to replacement.  
-**Trailing:** Only the last character is subjected to replacement.
+**Trailing:** Only the last character is subjected to replacement.  
 **Replace All:** Every character in a filename is subjected to replacement.
 
 # Settings Menu
@@ -110,7 +113,7 @@ This menu has two sub-menus: **Preferences** and **Exit**. 'Exit' menu terminate
 
 Alright, let's enumerate the two supported options:
 
-**File Generation:** This is a preference settings for the 'File Generation' panel. We can create a preset here that the File Generation panel will use. To add preset click the 'Add Preset' button. To edit existing preset, click the 'Edit Preset' button. TO delete an active preset, click the 'Delete Preset' button.
+**File Generation:** This is a preference settings for the 'File Generation' panel. We can create a preset here that the File Generation panel will use. To add preset click the 'Add Preset' button. To edit existing preset, click the 'Edit Preset' button. To delete an active preset, click the 'Delete Preset' button.
 
 A file generation preset has these properties:  
 **Preset Name:** Name of the preset. I usually put the forum domain here.  
