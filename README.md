@@ -34,7 +34,7 @@ IDEs may complain that 'SerialVersionUID' is unused. That's alright because the 
 
 IDEs may complain about raw types in this codebase. It's alright because I intentionally made those objects raw types and I put some measures to make sure that using these raw types are safe. This raw types are a product of deserialization process.
 
-If you know java generics. The generic type, the type in the diamond(<>) operator doesn't exist in runtime. Thus, if we serialize and object during runtime, the generic type of that object won't be included in the serialization process.
+If you know java generics. The generic type, the type in the diamond(<>) operator doesn't exist in runtime. Thus, if we serialize an object during runtime, the generic type of that object won't be included in the serialization process.
 
 Now, once we deserialize that object, we can only convert it to its raw type. For example, we serialize ArrayList&lt;Integer&gt;. Once we deserialize it, we can only convert it to ArrayList because &lt;Integer&gt; doesn't exist in runtime.
 
