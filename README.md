@@ -7,6 +7,10 @@ This app can help you share multiple non-copyrighted books and tutorials to onli
 
 I may update this project in the feature. However, that may not happen soon because I'm focusing on web development right now. I created and halted this project somewhere in 2021. Note, this project is pretty much complete. However, there are few features in this project that are left unfinished.
 
+## Java Version
+I created this app using java17(OpenJDK)(Eclipse Temurin). Thus, you need java17 or higher version if wanna run this app properly.
+
+## Building the App
 I didn't use IDE when I created this app. You can try importing it in your favorite IDE if you want. If you wanna compile this via terminal/command prompt, here's how I do it.
 
 ### Compiling  
@@ -22,9 +26,6 @@ If you want to pack this project in .jar file, create build director adjacent to
 **jar cfe ../build/Fmanager.jar main.Fmanager main/\*.class gui/\*.class gui/events/\*.class gui/gui_related_events/\*.class gui/subpanels/\*.class gui/subpanels/filetree/\*.class gui/dialogs/\*.class gui/dialogs/subpanels/prefs_subpanel/\*.class fileoperations/\*.class fileoperations/approvedopfunctions/\*.class**
 
 After finishing this project, I realized that IDEs are precious tools :satisfied:
-
-## Java Version
-I created this app using java17(OpenJDK)(Eclipse Temurin). Thus, you need java17 or higher version if wanna run this app properly.
 
 ## SerialVersionUID and raw types warnings
 When I compiled and run this in terminal/cmd using java17(Eclipse Temurin), I didn't see these warnings because I think I already suppressed them. However, some IDEs may still complain about these stuff. 
