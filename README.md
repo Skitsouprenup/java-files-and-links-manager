@@ -147,7 +147,9 @@ This dialog helps us choose which file we wanna upload in a random manner. This 
 **Created Symlink/s:** This property describes how the symlinks of the randomized output are handled. If the 'From Source' selection is selected, symlinks will be created from the source of the output directories. If the 'From Copy' selection is selected, symlinks will be created from the output directories.  
 **Saved Presets:** This property lets us load a saved configuration of the properties of settings dialog. Just select a preset in the dropdown and click the 'Load Preset' button to load the selected preset.
 
-**Save/Delete Preset:** This button opens up a dialog that lets us add a new 'settings' preset and delete an existing one. Type the preset name that you wanna add/delete in the textbox and click 'Save' button to save the preset. The preset won't be added if it already exists. You need to delete the existing preset first before you can add it again in the 'settings' preset record. click 'Delete' button to delete the preset in the record if it's existing.
+**Save/Delete Preset:** This button opens up a dialog that lets us add a new 'settings' preset and delete an existing one. 'settings' preset includes the source, destination, records and symlinks directories and the properties in the 'settings' dialog. 
+
+Type the preset name that you wanna add/delete in the textbox and click 'Save' button to save the preset. The preset won't be added if it already exists. You need to delete the existing preset first before you can add it again in the 'settings' preset record. click 'Delete' button to delete the preset in the record if it's existing.
 
 **Randomize:** Once all the properties are set, click this button to start the randomization process. Source directories and a destination directory are required. Otherwise, randomization process won't start. Record directories and a symlinks destination directory are optional.
 

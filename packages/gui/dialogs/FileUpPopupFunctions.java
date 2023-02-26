@@ -68,7 +68,15 @@ class FileUpPopupFunctions extends FileUpRandomizeFunctions{
 	protected void addItemsToJList(ArrayList<File> selectedFileList, final JDialog parentDialog,
 								   final JList<Object> listComponent, final JPanel listPanel,
 								   final LinkedHashSet<String> listSet) throws IOException{
-			
+		
+		//For some reason, we need to make the dialog resizable first before
+		//we can use pack(). I only encounter this problem in ubuntu linux.
+		//This doesn't happen in windows 7. Also this anomaly only happens
+		//when I add an item in the JList. When removing an item, I don't
+		//need to make the dialog resizable in order to make pack() work.
+		//This change doesn't affect how pack() works on windows 7.
+		parentDialog.setResizable(true);
+
 		if(listComponent.getName().equals(ListType.SOURCE.toString()) ||
 			listComponent.getName().equals(ListType.RECORD.toString())){
 			for(File f : selectedFileList){
@@ -99,7 +107,8 @@ class FileUpPopupFunctions extends FileUpRandomizeFunctions{
 				}
 			}
 		}
-		parentDialog.pack();		
+		parentDialog.pack();
+		parentDialog.setResizable(false);	
 	}
 	
 	protected int selectFilesThenVerifyPaths(

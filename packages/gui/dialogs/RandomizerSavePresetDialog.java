@@ -70,7 +70,7 @@ class RandomizerSavePresetDialog{
 		
 		//resize buttons
 		Dimension dm = new Dimension();
-		dm.setSize(80, saveBtn.getPreferredSize().getHeight());
+		dm.setSize(100, saveBtn.getPreferredSize().getHeight());
 		saveBtn.setPreferredSize(dm);
 		deleteBtn.setPreferredSize(dm);
 		cancelBtn.setPreferredSize(dm);
