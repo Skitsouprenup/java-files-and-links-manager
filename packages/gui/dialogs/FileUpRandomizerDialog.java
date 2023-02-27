@@ -292,7 +292,6 @@ public class FileUpRandomizerDialog extends FileUpPopupFunctions{
 			//Add source
 			if(val != JFileChooser.CANCEL_OPTION){
 				addItemsToJList(selectedFileList, mainFrame, sourceList, sourceListPnl, sourceSet);
-				System.out.println("Here");
 				mainFrame.setLocationRelativeTo(parent);
 			}
 		}
