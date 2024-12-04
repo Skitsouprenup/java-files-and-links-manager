@@ -11,7 +11,6 @@ class PostTypes{
 	"[B]By: [/B]\r\n"+ 
     "[B]Genre: [/B]\r\n"+ 
     "[B]Date Published: [/B]\r\n"+ 
-    "[B]Pages: [/B]\r\n"+ 
     "[B]Publisher: [/B]\r\n"+ 
     "[B]Format: [/B]\r\n"+ 
     "[B]Language: [/B]English\r\n\r\n"+
@@ -35,7 +34,6 @@ class PostTypes{
 	"[IMG][/IMG]\r\n\r\n"+
 	"[B]Category: [/B]\r\n"+
 	"[B]Date Published: [/B]\r\n"+
-	"[B]Pages: [/B]\r\n"+
 	"[B]Language: [/B]English\r\n"+
 	"[B]File Format: [/B]PDF\r\n\r\n";
 	

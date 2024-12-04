@@ -198,6 +198,7 @@ class FileGenPresetDialog{
 						return;
 					}
 				}
+
 				presets.add(new Preset(presetTxt.getText(),hostList));
 				index = presets.size()-1;
 			}
@@ -216,8 +217,11 @@ class FileGenPresetDialog{
 						editPreset = presets.get(i);
 						index = i;
 					}
+
 				editPreset.setPresetName(presetTxt.getText());
 				editPreset.setSupportedHosts(hostList);
+
+        ArrayList<String> hosts = editPreset.getSupportedHosts();
 				presets.set(index, editPreset);
 			}
 			parentPanel.createPresetFile();

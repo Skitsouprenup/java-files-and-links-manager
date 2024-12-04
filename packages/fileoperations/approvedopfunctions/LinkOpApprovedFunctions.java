@@ -23,6 +23,7 @@ public class LinkOpApprovedFunctions{
 			String[] suppHosts_with_rg_splitted = null;
 			
 			for(int i = 0; i < hostsArr.size(); i++){
+
 				hostHeaders[i] = new String("");
 				hostLinks[i] = new String("");
 									

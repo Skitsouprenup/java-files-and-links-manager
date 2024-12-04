@@ -163,11 +163,12 @@ public class PreferencesConfig{
 			"File Not Found",JOptionPane.ERROR_MESSAGE);
 			return false;
 		}
-		
+
 		try(ObjectInputStream ois = 
 		new ObjectInputStream(new FileInputStream(file))){
 			//This arraylist must be raw type
 			ArrayList rawArrayList = (ArrayList)ois.readObject();
+
 			if(prefsConfig != null){
 				
 				if(!defaultCurrentPresetVerification(rootFrame, null))
@@ -177,40 +178,48 @@ public class PreferencesConfig{
 				new ArrayList<>(prefsConfig.getCurrentSupportedHosts());
 				
 				for(int i = 0; i < rawArrayList.size(); i++){
+          boolean addHostToContainer = false;
 					
 					if(rawArrayList.get(i) instanceof AlternativeHost){
 						AlternativeHost ah = (AlternativeHost)rawArrayList.get(i);
-						
+
 						if(suppHosts.isEmpty())
 							break;
-						
+
 						for(int index = 0; index < suppHosts.size(); index++){
+
 							if(suppHosts.get(index).equals(ah.getHostName())){
 								
+                addHostToContainer = true;
 								container.append(ah.getHostName());
-								ArrayList<String> hostList = ah.getAltHostNames();
-								if(!hostList.isEmpty()){
+								ArrayList<String> altHostList = ah.getAltHostNames();
+								if(!altHostList.isEmpty()){
 									container.append("|");
-									for(int j = 0; j < hostList.size(); j++){
-										if(j == hostList.size()-1)
-											container.append(hostList.get(j));
-										else container.append(hostList.get(j) + "|");
+									for(int j = 0; j < altHostList.size(); j++){
+										if(j == altHostList.size()-1)
+											container.append(altHostList.get(j));
+										else container.append(altHostList.get(j) + "|");
 									}
 								}
-							
+
 								suppHosts.remove(index);
 								isMatch = true;
 								break;
 							}
 						}
+            
 						//creates a pattern that separates
 						//supported hosts with its alternative
 						//host name/s
-						if(i != rawArrayList.size()-1)
-							if(separatorRegex != null)
-								container.append("||");
-							else
-								container.append("|");
+            if(suppHosts.size() != 0 && addHostToContainer){
+              if(separatorRegex != null) {
+                container.append("||");
+              }
+							else {
+                container.append("|");
+              }
+            }
+             
 					}
 					else{
 						JOptionPane.showMessageDialog(
@@ -224,7 +233,8 @@ public class PreferencesConfig{
 						System.exit(1);
 					}
 				}
-				
+        //System.out.println(container.toString());
+
 				if(!isMatch){
 					JOptionPane.showMessageDialog(
 					rootFrame,
