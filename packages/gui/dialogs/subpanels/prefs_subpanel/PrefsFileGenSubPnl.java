@@ -83,19 +83,22 @@ public class PrefsFileGenSubPnl{
 		addPreset.addActionListener(spa);
 		editPreset.addActionListener(spa);
 		deletePreset.addActionListener(spa);
-		sitePresets.addActionListener(spa);
+		//sitePresets.addActionListener(spa);
 		
 		if(PreferencesConfig.loadPrefsConfigFile()){
 			if(!presets.isEmpty())
 				if(PreferencesConfig.defaultCurrentPresetVerification(mainDialogRef, presets))
-					for(int i = 0; i < presets.size(); i++)
-						if(presets.get(i).getPresetName().
-					       equals(PreferencesConfig.getPrefsConfig().getCurrentPresetName())){
-							   sitePresets.removeActionListener(spa);
-							   sitePresets.setSelectedIndex(i);
-							   sitePresets.addActionListener(spa);
-							   break;
-						   }
+					{
+            for(int i = 0; i < presets.size(); i++)
+              if(presets.get(i).getPresetName().
+                  equals(PreferencesConfig.getPrefsConfig().getCurrentPresetName())){
+                  sitePresets.removeActionListener(spa);
+                  sitePresets.setSelectedIndex(i);
+                  sitePresets.addActionListener(spa);
+                  break;
+                }
+            reDisplaySuppHosts();
+          }
 		}
 		else{
 			if(!presets.isEmpty())
