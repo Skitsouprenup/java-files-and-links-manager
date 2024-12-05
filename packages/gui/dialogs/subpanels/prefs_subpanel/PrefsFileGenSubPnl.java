@@ -305,14 +305,19 @@ public class PrefsFileGenSubPnl{
 				presets.remove(index);
 				createPresetFile();
 				loadPresetFile((index >= presets.size()) ? index-1 : index);
+        //For some reason, in this block, revalidate() in loadPresetFile() method is not
+        //enough to refresh 'supportedHosts' panel. Thus, repaint() is called
+        //here.
+        supportedHosts.repaint();
 				if(presets.isEmpty())
 					PreferencesConfig.getPrefsConfig().setCurrentPreset(new Preset(""));
 			}
 		}
 		else if(e.getSource() == editPreset){
-			if(!presets.isEmpty())
-				new FileGenPresetDialog(presets, 
+			if(!presets.isEmpty()) {
+        new FileGenPresetDialog(presets, 
 			        (Preset)sitePresets.getSelectedItem(), this);
+      }
 			else
 				JOptionPane.showMessageDialog(mainDialogRef,"Preset record is empty!",
 				  "Empty Preset Record",JOptionPane.ERROR_MESSAGE);

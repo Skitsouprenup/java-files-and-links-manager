@@ -171,6 +171,7 @@ class FileGenPresetDialog{
 			if(index < hostList.size()){
 				hostList.remove(index);
 				if(!hostList.isEmpty()){
+
 					suppHosts.setListData(hostList.toArray());
 				}
 				else{
