@@ -168,7 +168,7 @@ class FileGenPresetDialog{
 		}
 		else if(e.getSource() == deleteHost){
 			int index = suppHosts.getSelectedIndex();
-			if(index >= 0 && index < hostList.size()){
+			if(index < hostList.size()){
 				hostList.remove(index);
 				if(!hostList.isEmpty()){
 					suppHosts.setListData(hostList.toArray());
