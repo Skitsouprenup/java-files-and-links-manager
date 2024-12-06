@@ -307,7 +307,8 @@ public class PrefsFileGenSubPnl{
 				loadPresetFile((index >= presets.size()) ? index-1 : index);
         //For some reason, in this block, revalidate() in loadPresetFile() method is not
         //enough to refresh 'supportedHosts' panel. Thus, repaint() is called
-        //here.
+        //here. This problem could only persist on linux. Now sure if this problem
+        //persists on windows.
         supportedHosts.repaint();
 				if(presets.isEmpty())
 					PreferencesConfig.getPrefsConfig().setCurrentPreset(new Preset(""));

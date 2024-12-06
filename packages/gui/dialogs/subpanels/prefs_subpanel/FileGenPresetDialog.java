@@ -190,6 +190,7 @@ class FileGenPresetDialog{
 			}
 			
 			int index = 0;
+      //Add Preset Dialog
 			if(isAdd){
 				for(Preset p : presets){
 					if(p.getPresetName().equals(presetTxt.getText())){
@@ -203,6 +204,7 @@ class FileGenPresetDialog{
 				presets.add(new Preset(presetTxt.getText(),hostList));
 				index = presets.size()-1;
 			}
+      //Edit Preset Dialog
 			else{
 				Preset editPreset = null;
 				for(int i = 0; i < presets.size(); i++)
@@ -239,16 +241,13 @@ class FileGenPresetDialog{
 				PreferencesConfig.loadPrefsConfigFile();
 				parentPanel.updateReportsPaneDueToCurrentPresetChange();
 			}
-			else{
-				//add the newly created preset if this preset is the first preset on
-				//the preset list.
-				if(PreferencesConfig.getPrefsConfig().getCurrentPresetName().isEmpty() || 
-					PreferencesConfig.getPrefsConfig().getCurrentPresetName().isBlank()){
-					PreferencesConfig.getPrefsConfig().setCurrentPreset(presets.get(index));
-					parentPanel.createPrefsConfigFile();
-					PreferencesConfig.loadPrefsConfigFile();
-					parentPanel.updateReportsPaneDueToCurrentPresetChange();
-				}
+			
+      if(isAdd){
+        //Select the newly created preset as current preset
+        PreferencesConfig.getPrefsConfig().setCurrentPreset(presets.get(index));
+        parentPanel.createPrefsConfigFile();
+        PreferencesConfig.loadPrefsConfigFile();
+        parentPanel.updateReportsPaneDueToCurrentPresetChange();
 			}
 			
 			JOptionPane.showMessageDialog(dialog,"All changes are applied!",
