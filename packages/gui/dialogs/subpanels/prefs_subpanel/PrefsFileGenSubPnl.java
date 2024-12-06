@@ -311,6 +311,8 @@ public class PrefsFileGenSubPnl{
         supportedHosts.repaint();
 				if(presets.isEmpty())
 					PreferencesConfig.getPrefsConfig().setCurrentPreset(new Preset(""));
+
+        updateFileGenPresetAndReportsPane();
 			}
 		}
 		else if(e.getSource() == editPreset){
@@ -324,16 +326,20 @@ public class PrefsFileGenSubPnl{
 		}
 		else if(e.getSource() == sitePresets){
 			//System.out.println(e.getActionCommand());
-			reDisplaySuppHosts();
-			if(!presets.isEmpty()){
-				PreferencesConfig.getPrefsConfig().setCurrentPreset((Preset)sitePresets.getSelectedItem());
-				createPrefsConfigFile();
-				PreferencesConfig.loadPrefsConfigFile();
-				updateReportsPaneDueToCurrentPresetChange();
-			}
+      reDisplaySuppHosts();
+			updateFileGenPresetAndReportsPane();
 		}
 	}
 	
+  void updateFileGenPresetAndReportsPane() {
+    if(!presets.isEmpty()){
+      PreferencesConfig.getPrefsConfig().setCurrentPreset((Preset)sitePresets.getSelectedItem());
+      createPrefsConfigFile();
+      PreferencesConfig.loadPrefsConfigFile();
+      updateReportsPaneDueToCurrentPresetChange();
+    }
+  }
+
 	void updateReportsPaneDueToCurrentPresetChange(){
 		if(jb.getValue() != null)
 			if(jb.getValue() == Jobs.CREATE_POST_TXT){
