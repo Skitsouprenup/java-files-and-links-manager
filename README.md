@@ -25,6 +25,9 @@ Once you compiled the project successfully, open terminal/cmd in the 'classes' d
 If you want to pack this project in .jar file, create build directory adjacent to 'classes' directory and open terminal/cmd in the 'classes' directory and enter this command:  
 **jar cfe ../build/Fmanager.jar main.Fmanager main/\*.class gui/\*.class gui/events/\*.class gui/gui_related_events/\*.class gui/subpanels/\*.class gui/subpanels/filetree/\*.class gui/dialogs/\*.class gui/dialogs/subpanels/prefs_subpanel/\*.class fileoperations/\*.class fileoperations/approvedopfunctions/\*.class**
 
+### src Directory
+'src' directory contains images that this app uses. Include the directory in the 'classes' directory that you created earlier so that you won't have image-related errors when you start the app. To include the images in a jar file, just add the relative path of 'src' directory in your build command. 
+
 After finishing this project, I realized that IDEs are precious tools :satisfied:
 
 ## SerialVersionUID and raw types warnings
@@ -136,8 +139,8 @@ This dialog helps us choose which file we wanna upload in a random manner. This 
 
 **Add Source/s:** This button lets you choose directories that we wanna add as candidates for randomization.  
 **Add Destination:** This button lets you choose a directory where the randomized file will be placed.  
-**Add Reference:** This button lets you choose directories that is going to be compared with the source directories. If the directory name of a source directory and a reference directory is equal, that source directory won't become a candidate for randomization.  
-**Add Link Destination:** This button lets you choose a directory where 'symlinks' will be placed. **Symlinks** is just a shortcut for a file, to put it simply.
+**Add Reference:** Optional. This button lets you choose directories that is going to be compared with the source directories. If the directory name of a source directory and a reference directory is equal, that source directory won't become a candidate for randomization.  
+**Add Link Destination:** Optional. This button lets you choose a directory where 'symlinks' will be placed. **Symlinks** is just a shortcut for a file, to put it simply.
 
 **# of directories:** This textbox sets the number of random directories in the output. If the number in this textbox is greater than the number of source directory candidates, the number of random directories in the output will be equal to the number of candidates.
 
